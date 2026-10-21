@@ -1,43 +1,49 @@
-# Pallavi Srinivas: Game Assemblies Lab — Spring 2026
+# Modular Expressive Animation for LLM-Driven NPCs
 
-## Independent study proposal
+Independent Study, Fall 2026. Pallavi Srinivas.
 
-**Proposal:** Explore and conduct research and develop NPC prototypes that leverage large language models (LLMs) to enable real-time decision-making, actions, dialogue, and expressive behavior informed by environmental context. Through iterative playtesting, research will explore the implications of these prototype architectures on the user experience to improve upon, refine, and evaluate the models.
+I want to see what happens when an LLM-driven NPC’s internal state shows up in its body, and whether that movement actually changes an audience’s believability in the character.
 
-## Project materials (Google Drive)
+## Previous Research + Work
 
-Supporting documents, references, and related files for this independent study: [Google Drive folder](https://drive.google.com/drive/folders/18dDFJLuS4b_EWVP16HX0orJ9C4rwnhxj?usp=drive_link).
+Last spring, as a researcher, my goal was to develop an NPC that could concoct philosophical thoughts and intelligently deduce its needs, and eventually recognize objects in its environment and make thoughtful decisions based on what it saw. The NPC moves to an actor location depending on the state the LLM has thought to enter, based on those philosophical thoughts.
 
----
+That eliminated the need for a first-person POV to control the NPC, and the choices it made were intelligent and correct. But there was still no way for the NPC to gauge exactly what was in the room around it, and all of its decisions played out as moves inside a state machine. It could think. It couldn’t show me what it was feeling.
 
-## Ideal outcome
+The system architecture from that work is on [Figma](https://www.figma.com/board/KmBNkNpDsjQy4lyBqSFI9k/Game-Assemblies-Lab--System-Architecture?node-id=0-1&t=QWCxtFbDbG4vNxzV-1).
 
-Design an NPC that leverages LLMs and can successfully navigate and meaningfully respond to a procedurally generated environment.
+## Project Pitch
 
-The NPC’s movement and dialogue dynamically adapt to environmental conditions and other external factors. Depending on the NPC’s identity (human, bird, lion, and so on), its behavioral patterns, emotional responses, and actions reflect that role across the changing environment.
+After my SWE internship at Halo Studios this summer, I got even more intrigued by AI-powered NPCs. I had the chance to talk with Brie Chin-Deyerle, one of the main developers of the bots in Halo Infinite. She described how the team had to recalibrate how characters interacted and made decisions so they’d be more believable to the player, and what she sees as the caveats of using this new technology.
 
-The LLM drives the NPC to make logical and informed decisions, enhancing the user’s believability of the game and the world they are within.
+That pushed me toward building a dynamic character that uses visuals to display the emotions it might be feeling. Upon receiving the LLM prompts, I want my NPC to move in an abstract, dance-like fashion, with emotions that blend together. That should make the way it moves feel more natural, and it gives me a way to observe how movement affects an audience’s perception of the NPC.
 
----
+Some examples I’ve been looking at: Halo Infinite, the Forza Horizon series, and research on Counter-Strike.
 
-## Research Topics
+## Research Question
 
-### Environment perception and context
+- How do actions, expressions, and other visual aspects impact an audience’s believability in an NPC?
+- How can an LLM-driven NPC's internal state be translated into coordinated, expressive body movements using modular mocap animations?
 
-- How does the NPC identify and contextualize the environment around them?
-- Do different visuals (or visual abstractions) change how well an LLM-grounded NPC can reason about space and state?
+Right now the LLM drives the NPC to make logical, informed decisions. To make the game world more believable, I want animations that dynamically adapt to the NPC’s emotions, environmental factors, awareness, surroundings, and more. With this final deliverable, I hope to explore what makes LLM-driven NPCs more engaging, believable, and perceptibly intelligent.
 
-### Technical foundations
+## Pitch + Mood Board
 
-- Survey state-of-the-art technology that exists today for LLM-driven agents in games or interactive systems.
-- Primitives as interface between world and model: geometry, colliders, sound, navigation meshes, triggers, and other engine-level signals the NPC can “read.”
+**The Gap in Current AI Systems.** Traditional game AI uses discrete state machines or full-body clip triggers. High-level LLM outputs often lack fluid, expressive body language.
 
-### Related work
+**Core Opportunity.** Shift from selecting rigid full-body animations to modular, multi-layered body part controllers. Instead of the LLM choosing a single static animation clip, the LLM state drives independent skeletal regions simultaneously.
 
-- Research previous games and projects: what have they done for NPCs reacting to environment, and what lessons apply to LLM-driven designs?
+**Mocap Integration.** Record atomic movement primitives with a dedicated mocap performer, then recombine them dynamically in Unreal Engine.
 
----
+## Abstractions of Human Expression
 
-## About this repository
+This is the part I’m most excited about. My experiment addresses the abstractions of human expression, with different limbs experiencing different “emotions.” Each skeletal region can carry its own consciousness: an arm might still be holding the last thought while the torso shifts into a new state and the legs settle into something else.
 
-*Game Assemblies Lab* — coursework and prototypes for Spring 2026.
+In my demo so far, I used Mixamo animations to depict different states. That helped me test the pipeline, but it’s still one clip per state. What I’m after is blending different “thought processes” across the body, so the character reads as one person without feeling choppy or state machine-like.
+
+## Technical Goals
+
+- Learn to use mocap to capture someone’s movements and generate animations as quickly as possible. I’ve already recruited my MoCap muse.
+- Research the best way to employ these animations within the existing environment.
+- Learn to blend animations and different “thought processes” without them looking choppy or state machine-like.
+- Expand my knowledge of traditional game AI architectures, so I pick up skills I can apply at a larger game studio.
