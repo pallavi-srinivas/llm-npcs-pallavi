@@ -244,7 +244,7 @@ Every decision in both modes is logged to `decisions.csv`. Running `analyze.py` 
 
 ---
 
-## Next steps
+## To expand upon project:
 
 - **Mocap primitives.** Record atomic movement primitives with a dedicated mocap performer and recombine them in Unreal, replacing the Mixamo clips. I've already recruited my MoCap muse.
 - **Emotion layer.** Blend emotional states (tired, anxious, happy) over the whole body with an adjustable intensity.
