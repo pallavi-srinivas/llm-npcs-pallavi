@@ -149,7 +149,7 @@ Thirst, Hunger, and Sleep are stored in the Blackboard and drop over time in `Up
 
 ---
 
-## Version 1 vs version 2
+## Version 1 vs. Version 2
 
 | | Version 1 (Spring 2026) | Version 2 (Fall 2026) |
 |---|---|---|
