@@ -6,6 +6,8 @@ I want to see what happens when an LLM-driven NPC's internal state shows up in i
 
 This repository contains **Kayla**, an autonomous NPC built in Unreal Engine 5 with Blueprints. Kayla's decisions come from a large language model (Claude), and her body expresses those decisions through layered animation: her arms, legs, and movement are chosen separately, so she can drink while running, think while standing still, or wander off to look at something that caught her eye.
 
+[Slides from Fall 2026](https://drive.google.com/drive/folders/1Ti5xv5QcdRm6XhmFnF0JM6Wm_9o2X3Ji?usp=sharing)
+
 ---
 
 ## Research questions
@@ -21,9 +23,11 @@ Right now the LLM drives the NPC to make logical, informed decisions. To make th
 
 Last spring, my goal was to develop an NPC that could come up with philosophical thoughts, reason about her own needs, recognize objects in her environment, and make thoughtful decisions based on what she saw. The NPC moved to an actor location depending on which state the LLM decided she should enter.
 
-That removed the need for a mechanically controlled NPC, and the choices made were intelligent and correct. However, all of her decisions played out as moves inside a state machine: the LLM picked one state, and a Behavior Tree ran a fixed routine for it (walk to the station, play one full-body animation, walk back home). **She could think, but she couldn't show what she was feeling.**
+That removed the need for a mechanically controlled NPC, and the choices made were intelligent and correct. However, all of her decisions played out as moves inside a state machine: the LLM picked one state, and a Behavior Tree ran a fixed routine for it (walk to the station, print out the thought, walk back home). **She could think, but she couldn't show what she was feeling.**
 
 The architecture diagrams for both versions are on [Figma](https://www.figma.com/board/KmBNkNpDsjQy4lyBqSFI9k/Game-Assemblies-Lab--System-Architecture?node-id=0-1&t=QWCxtFbDbG4vNxzV-1).
+
+[Slides from Spring 2026](https://drive.google.com/drive/folders/1cl2l2IWbZpuaiaO3Lb7tH23I6LJloj5V?usp=sharing)
 
 ---
 
